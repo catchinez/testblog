@@ -9,7 +9,7 @@
              with font-awesome or any other icon font library -->
         
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{ route('admin.category.index') }}" class="nav-link">
             <i class="nav-icon fa-solid fa-bone"></i>
             <p>
               Categories
