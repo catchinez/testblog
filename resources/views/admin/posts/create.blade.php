@@ -27,7 +27,7 @@
         <div class="row">
 
           <div class="col-12">      
-            <form action="{{ route('admin.post.store') }}" method="POST" >
+            <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data">
               @csrf 
               <div class="form-group w-25">
                 <label>Название поста</label>
@@ -43,6 +43,35 @@
                   <div class="text-danger">Это поле необходимо для заполнения {{ $message }}</div>
                 @enderror
               </div>
+              
+              <!-- Add preview image form -->
+              <div class="form-group w-50">
+                <label for="exampleInputFile">Добавить превью</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="preview_image">
+                    <label class="custom-file-label">Выберите изображение</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">Загрузка</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Add main image form -->
+              <div class="form-group w-50">
+                <label for="exampleInputFile">Добавить главное изображение</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="main_image">
+                    <label class="custom-file-label">Выберите изображение</label>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">Загрузка</span>
+                  </div>
+                </div>
+              </div>
+              <!--button ADD -->  
               <div class="form-group">
                 <input type="submit" class="btn-primary" value="Добавить">
               </div>
