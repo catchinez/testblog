@@ -56,6 +56,9 @@
                     <span class="input-group-text">Загрузка</span>
                   </div>
                 </div>
+                @error('preview_image')
+                  <div class="text-danger">Это поле необходимо для заполнения {{ $message }}</div>
+                @enderror
               </div>
               
               <!-- Add main image form -->
@@ -70,6 +73,20 @@
                     <span class="input-group-text">Загрузка</span>
                   </div>
                 </div>
+                @error('main_image')
+                  <div class="text-danger">Это поле необходимо для заполнения {{ $message }}</div>
+                @enderror
+              </div>
+              <!-- Category Select -->
+              <div class="form-group w-50">
+                <label>Выберите категорию</label>
+                <select class="form-control" name="category_id">
+                  @foreach($categories as $category)
+                  <option value="{{ $category->id }}"
+                    {{ $category->id == old('category_id') ? 'selected' : ' '}}
+                    >{{ $category->title }}</option>
+                  @endforeach
+                </select>
               </div>
               <!--button ADD -->  
               <div class="form-group">

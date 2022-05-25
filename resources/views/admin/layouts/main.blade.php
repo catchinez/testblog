@@ -99,6 +99,11 @@ $(function () {
   bsCustomFileInput.init();
 });
 </script>
+<script>
+    .custom-file-label::after {
+    content: "...";
+  }
+</script>
 
 </body>
 </html>
