@@ -88,6 +88,16 @@
                   @endforeach
                 </select>
               </div>
+              <!--Multiselect Select2 for tags -->
+              <div class="form-group">
+                <label>Тэги</label>
+                <select class="select2" name="tag_ids[]" multiple="multiple" data-placeholder="Выберите тэги" style="width: 50%;">
+                  @foreach($tags as $tag)
+                  <option {{ is_array(old('tag_ids')) && in_array($tag->id, old('tag_ids')) ? 'selected' : ' ' }} 
+                          value="{{ $tag->id }}">{{ $tag->title }}</option>
+                  @endforeach
+                </select>
+              </div>
               <!--button ADD -->  
               <div class="form-group">
                 <input type="submit" class="btn-primary" value="Добавить">
