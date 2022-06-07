@@ -11,6 +11,6 @@ class ShowController extends Controller
 {
     public function __invoke(User $user)
     {
-        return view('admin.users.show', compact('users'));
+        return view('admin.users.show', compact('user'));
     }
 }
