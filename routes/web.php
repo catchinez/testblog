@@ -70,4 +70,3 @@ Auth::routes(['verify' => true]);
 
 
 
-

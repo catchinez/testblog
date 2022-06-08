@@ -43,12 +43,18 @@
     </ul>
     <ul class="navbar-nav">
       <li class="nav-item">
+        <label for="user">{{$user->name}}</label>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
         <form action="{{ route('logout') }}" method="POST">
           @csrf
           <input class="btn btn-outline-primary" type="submit" value="Выйти">
         </form>
       </li>
     </ul>
+    
   </nav>
   <!-- /.navbar -->
 
