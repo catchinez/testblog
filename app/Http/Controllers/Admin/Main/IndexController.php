@@ -12,7 +12,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $user = Auth::user();
-        return view('admin.main.index', compact('user'));
+
+        return view('admin.main.index');
     }
 }
