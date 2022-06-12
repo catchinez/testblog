@@ -65,4 +65,8 @@ class User extends Authenticatable implements MustVerifyEmail
             self::ROLE_READER => 'Читатель',
         ];
     }
+
+    public function likedPosts() {
+        return $this->belongsToMany(Post::class, 'post_user_likes', 'user_id', 'post_id');
+    }
 }
