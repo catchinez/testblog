@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::group(['namespace' => 'App\Http\Controllers\Main'], function() {
-    Route::get('/', 'IndexController');
+    Route::get('/', 'IndexController')->name('main.index');
 });
 
 
